@@ -1,12 +1,6 @@
 function [Q,varargout] = identity(p,varargin)
 % Precision function a Gaussian Process with build-in Gaussian Markov
-% Random Field
-%
-% Formular
-%           |N(i)| + c0     if j = i
-% (Q)_ij =  -1              if j element of N(i)
-%           0               otherwise
-% distance function to define N(i): eps = {(i,j) | ||p_i - p_j|| < r}
+% Random Field, this is simply the identity matrix
 %
 % Syntax:
 %       [Q] = radius_prec(p)
@@ -18,12 +12,6 @@ function [Q,varargout] = identity(p,varargin)
 %
 % Input:
 %   p: generating points , as a Matrix with D x m
-%
-% Propertyname/-value pairs:
-%   PreParam - array of the precision function parameters
-%       1 x 1 array: r -> characteristic radius
-%   struct - gives out the hyperparameters, additional output
-%   argument needed (true or false, default: false)
 %
 % Output:
 %   Q - precision matrix (m x m)
